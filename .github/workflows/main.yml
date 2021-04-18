@@ -56,6 +56,6 @@ jobs:
           cd /project
           wget https://github.com/nmthink/kyo-realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
-          cd kyo-realworld-nuxtjs
+          mv release.tgz backupzip/release.$(date +"%Y%m%d%H%M%S").tgz
           npm install --production
           pm2 reload pm2.config.json
